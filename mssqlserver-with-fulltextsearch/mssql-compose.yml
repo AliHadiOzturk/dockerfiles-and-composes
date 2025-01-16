@@ -1,0 +1,10 @@
+services:
+  mssql_server:
+    # image: mcr.microsoft.COM/mssql/server:2022-latest
+    build:
+      dockerfile: Dockerfile
+    environment:  
+      ACCEPT_EULA: "Y"
+      MSSQL_SA_PASSWORD: Password!123
+    ports:
+      - "1433:1433"
